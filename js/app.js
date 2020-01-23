@@ -1,10 +1,12 @@
 'use strict';
+// I'm sorry for this non complete delivery.
+// I shall explain in a personal conversation
 console.log('Mine Sweeper');
 
 
 const SIZE = 4;
 const mine = 'X'
-var  NOMINE = '@';
+var NOMINE = '@';
 var isShown = false;
 var gBoard = [];
 var gGameInterval = null;
@@ -32,7 +34,7 @@ function buildBoard(SIZE) {
     for (var i = 0; i < SIZE; i++) {
         board[i] = [];
         for (var j = 0; j < SIZE; j++) {
-            board[i][j] =[];
+            board[i][j] = [];
         }
     }
     board[2][3] = mine;
@@ -40,7 +42,7 @@ function buildBoard(SIZE) {
 
     console.table(board);
     return board;
-    
+
 }
 
 function renderBoard(board) {
@@ -69,12 +71,12 @@ function countNegs(posI, posJ) {
         for (var j = posJ - 1; j <= posJ + 1; j++) {
             if (j < 0 || j >= gBoard.length) continue;
             if (i === posI && j === posJ) continue;
-            if (gBoard[i][j] === board) 
-            minesCount++
+            if (gBoard[i][j] === board)
+                minesCount++
         }
     }
     return minesCount
-} 
+}
 
 
 // function play() {
